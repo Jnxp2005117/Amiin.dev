@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Download UI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-tiktok"></i>
+                <span>Amiin.dev</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search files...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-actions">
+                <div class="avatar">
+                    <img src="PFP.jpeg" alt="User Avatar">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li class="active"><i class="fas fa-home"></i> For You</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="content">
+                <div class="file-grid">
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-001</h3>
+                            <p>PDF Document</p>
+                            <button class="download-btn" data-file="F-001" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-002</h3>
+                            <p>Image File</p>
+                            <button class="download-btn" data-file="F-002" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-003</h3>
+                            <p>Audio File</p>
+                            <button class="download-btn" data-file="F-003" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-004</h3>
+                            <p>Video File</p>
+                            <button class="download-btn" data-file="F-004" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-005</h3>
+                            <p>Archive File</p>
+                            <button class="download-btn" data-file="F-005" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                    <div class="file-card">
+                        <div class="file-icon"><i class="fas fa-file-code"></i></div>
+                        <div class="file-info">
+                            <h3>F-006</h3>
+                            <p>Code File</p>
+                            <button class="download-btn" data-file="F-006" data-size="3.0MB">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="download-modal" id="downloadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Download</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to download <span id="fileName"></span>?</p>
+                <p>File size: <span id="fileSize"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelDownload">Cancel</button>
+                <button id="confirmDownload">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
